@@ -1,10 +1,52 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/header/Header";
 import Footer from "@/app/components/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+// import  recoleta  from "@/app/lib/fonts/Font";
+
+// const inter = Inter({ subsets: ["latin"] });
+
+const roboto_c = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "100", "200", "300", "800", "900"],
+  variable: '--font-roboto-c'
+})
+
+
+import localFont from 'next/font/local'
+
+const recoleta = localFont({
+    src: [
+      {
+        path: '../public/assets/fonts/Recoleta-Thin.ttf',
+        weight: '400',
+        style: 'normal',
+      },
+      {
+        path: '../public/assets/fonts/RecoletaAlt-Black.ttf',
+        weight: '500',
+        style: 'italic',
+      },
+      {
+        path: '../public/assets/fonts/RecoletaAlt-SemiBold.ttf',
+        weight: '600',
+        style: 'normal',
+      },
+      {
+        path: '../public/assets/fonts/RecoletaAlt-Bold.ttf',
+        weight: '700',
+        style: 'italic',
+      },
+    ],
+    variable: '--font-recoleta'
+  })
+
+
+
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +59,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` ${inter.className}`}>
-        {/*  */}
+    <html lang="en" className={`${recoleta.variable} font-recoleta`}>
+      <body className={` `}>
+        {/* ${inter.className} */}
         <Header/>
         {children}
         <Footer/>

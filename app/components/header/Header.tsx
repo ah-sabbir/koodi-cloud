@@ -1,5 +1,5 @@
 const Header = (props:any) => {
-    return <></>
+    return <p className="font-robotoC font-semibold text-3xl">this is footer</p>
 }
 
 
