@@ -56,7 +56,7 @@ const Header = (props:any) => {
                                 // )
 
                                 return (
-                                    <li className=" p-4">
+                                    <li key={i} className=" p-4">
                                         <Link href={`/${item.url}`}>{item.title}</Link>
                                     </li>
                                 )
