@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         recoleta: ['var(--font-recoleta)'],
-        robotoC: ['var(--font-roboto-c)']
+        roboto: ['var(--font-roboto)']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
